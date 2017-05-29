@@ -19,6 +19,8 @@ public class Const {
         public static final String EXTRA_NAME = "com.framgia.marvel.EXTRA_NAME";
         public static final String EXTRA_RESULT = "com.framgia.marvel.EXTRA_RESULT";
         public static final String EXTRA_COMIC = "com.framgia.marvel.EXTRA_COMIC";
+        public static final String EXTRA_LIST_IMAGE = "com.framgia.marvel.EXTRA_LIST_IMAGE";
+        public static final String EXTRA_POSITION = "com.framgia.marvel.EXTRA_POSITION";
     }
 
     public static class RequestCode {
@@ -27,6 +29,7 @@ public class Const {
 
     public static class Bundle {
         public static final String BUNDLE_SEARCH = "com.framgia.marvel.BUNDLE_SEARCH";
+        public static final String BUNDLE_IMAGE = "com.framgia.marvel.BUNDLE_IMAGE";
     }
 
     public static final int COLUMN_NUMB = 3;
