@@ -14,6 +14,7 @@ import com.framgia.marvel.data.model.Result;
 import com.framgia.marvel.data.model.Thumbnail;
 import com.framgia.marvel.data.value.Const;
 import com.framgia.marvel.ui.activity.DisplayImageActivity;
+import com.framgia.marvel.ui.activity.ViewPagerActivity;
 
 import java.util.List;
 
@@ -57,8 +58,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder>{
             mImage.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String avatarUrl = mUrl.get(getAdapterPosition()).getPath() + Const.Size.SIZE_DETAIL + mUrl.get(getAdapterPosition()).getExtension();
-                    mContext.startActivity(DisplayImageActivity.getInstance(mContext, avatarUrl));
+                    mContext.startActivity(ViewPagerActivity.getInstance(mContext, mUrl, getAdapterPosition()));
                 }
             });
         }
