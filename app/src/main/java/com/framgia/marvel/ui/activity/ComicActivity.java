@@ -1,7 +1,9 @@
 package com.framgia.marvel.ui.activity;
 
+import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -127,6 +129,14 @@ public class ComicActivity extends AppCompatActivity {
 
     private void initView() {
         mTextIsbn = (TextView) findViewById(R.id.text_comic_isbn);
+        mTextIsbn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                intent.putExtra(SearchManager.QUERY, "ISBN " + mResult.getIsbn());
+                startActivity(intent);
+            }
+        });
         mTextDes = (TextView) findViewById(R.id.text_comic_description);
         mTextTime = (TextView) findViewById(R.id.text_comic_time);
         mImageAvatar = (ImageView) findViewById(R.id.image_comic_avatar);
